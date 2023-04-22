@@ -15,11 +15,11 @@ ssh to the gpu worker node, e.g. ssh ec2-user@10.10.80.56
 sudo lspci | grep -i nvidia
 ```
 
-- Output
-```
-12:00.0 3D controller: NVIDIA Corporation TU104GL [Tesla T4] (rev a1)
-d8:00.0 3D controller: NVIDIA Corporation TU104GL [Tesla T4] (rev a1)
-```
+  - Output
+    ```
+    12:00.0 3D controller: NVIDIA Corporation TU104GL [Tesla T4] (rev a1)
+    d8:00.0 3D controller: NVIDIA Corporation TU104GL [Tesla T4] (rev a1)
+    ```
 
 2. Detect the recommended nvidia driver
 ```
