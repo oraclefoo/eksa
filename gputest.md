@@ -10,7 +10,7 @@ Steps and outputs are tested with the following:
 ### Install the nvidia driver on the gpu worker node
 ssh to the gpu worker node, e.g. ssh ec2-user@10.10.80.56
 
-Check the GPU is detected by the OS
+1. Check the GPU is detected by the OS
 ```
 sudo lspci | grep -i nvidia
 ```
@@ -21,7 +21,7 @@ Output
 d8:00.0 3D controller: NVIDIA Corporation TU104GL [Tesla T4] (rev a1)
 ```
 
-Detect the recommended nvidia driver
+2. Detect the recommended nvidia driver
 ```
 sudo apt-get update
 sudo apt-get -y install ubuntu-drivers-common
@@ -47,14 +47,14 @@ driver   : nvidia-driver-515 - distro non-free
 driver   : xserver-xorg-video-nouveau - distro free builtin
 ```
 
-Install the recommended driver. Note: autoinstall caused missing uuid issue where the server would not reboot
+3. Install the recommended driver. Note: autoinstall caused missing uuid issue where the server would not reboot
 ```
 sudo apt -y install nvidia-driver-530
 ```
 
-Reboot the node - sudo reboot
+4. Reboot the node - sudo reboot
 
-ssh to the gpu worker node and check the nvidia driver
+5. ssh to the gpu worker node and check the nvidia driver
 ```
 sudo nvidia-smi
 ```
@@ -83,12 +83,12 @@ Output
 ### Install the gpu operator
 On the admin node
 
-Add nvidia repo to helm
+6. Add nvidia repo to helm
 ```
 helm repo add nvidia https://helm.ngc.nvidia.com/nvidia && helm repo update
 ```
 
-Install the gpu operator
+7. Install the gpu operator
 ```
 helm install --wait --generate-name -n gpu-operator --create-namespace \
      nvidia/gpu-operator \
@@ -165,7 +165,7 @@ Labels:             beta.kubernetes.io/arch=amd64
                     nvidia.com/mig.strategy=single
 ```
 
-Create gpupod.yaml
+8. Create gpupod.yaml
 ```
 apiVersion: v1
 kind: Pod
@@ -181,7 +181,7 @@ spec:
         nvidia.com/gpu: 1
 ```
 
-Apply gpupod.yaml
+9. Apply gpupod.yaml
 ```kubectl apply -f gpupod.yaml```
 
 Output
@@ -211,7 +211,7 @@ Output
       nvidia.com/gpu:  1
 ```
 
-Check the pod log
+10. Check the pod log
 ```
 kubectl logs cuda-vector-add
 ```
