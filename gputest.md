@@ -16,9 +16,9 @@ sudo lspci | grep -i nvidia
 ```
   - Output
         -```
-        12:00.0 3D controller: NVIDIA Corporation TU104GL [Tesla T4] (rev a1)
-        d8:00.0 3D controller: NVIDIA Corporation TU104GL [Tesla T4] (rev a1)
-        ```
+        -12:00.0 3D controller: NVIDIA Corporation TU104GL [Tesla T4] (rev a1)
+        -d8:00.0 3D controller: NVIDIA Corporation TU104GL [Tesla T4] (rev a1)
+        -```
 2. Install ubuntu-drivers to detect the recommended nvidia driver
 ```
 sudo apt-get update
