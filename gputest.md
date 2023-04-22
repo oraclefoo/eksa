@@ -28,24 +28,24 @@ sudo apt-get -y install ubuntu-drivers-common
 sudo ubuntu-drivers devices
 ```
 
-		- Output from ubuntu-drivers devices
-    ```
-    == /sys/devices/pci0000:11/0000:11:00.0/0000:12:00.0 ==
-    modalias : pci:v000010DEd00001EB8sv000010DEsd000012A2bc03sc02i00
-    vendor   : NVIDIA Corporation
-		model    : TU104GL [Tesla T4]
-		driver   : nvidia-driver-510 - distro non-free
-		driver   : nvidia-driver-418-server - distro non-free
-		driver   : nvidia-driver-450-server - distro non-free
-		driver   : nvidia-driver-470-server - distro non-free
-		driver   : nvidia-driver-525 - distro non-free
-		driver   : nvidia-driver-515-server - distro non-free
-		driver   : nvidia-driver-525-server - distro non-free
-		driver   : nvidia-driver-530 - distro non-free recommended
-		driver   : nvidia-driver-470 - distro non-free
-		driver   : nvidia-driver-515 - distro non-free
-		driver   : xserver-xorg-video-nouveau - distro free builtin
-		```
+  - Output from ubuntu-drivers devices
+        ````ruby
+        == /sys/devices/pci0000:11/0000:11:00.0/0000:12:00.0 ==
+        modalias : pci:v000010DEd00001EB8sv000010DEsd000012A2bc03sc02i00
+        vendor   : NVIDIA Corporation
+	model    : TU104GL [Tesla T4]
+	driver   : nvidia-driver-510 - distro non-free
+	driver   : nvidia-driver-418-server - distro non-free
+	driver   : nvidia-driver-450-server - distro non-free
+	driver   : nvidia-driver-470-server - distro non-free
+	driver   : nvidia-driver-525 - distro non-free
+	driver   : nvidia-driver-515-server - distro non-free
+	driver   : nvidia-driver-525-server - distro non-free
+	driver   : nvidia-driver-530 - distro non-free recommended
+	driver   : nvidia-driver-470 - distro non-free
+	driver   : nvidia-driver-515 - distro non-free
+	driver   : xserver-xorg-video-nouveau - distro free builtin
+	````
 
 3. Install the recommended driver. Note: autoinstall caused missing uuid issue where the server would not reboot
 ```
