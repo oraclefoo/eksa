@@ -1,7 +1,7 @@
 ## EKS Anywhere bare metal GPU Operator
 Steps and outputs are tested with the following:
 * eksctl anywhere version v0.15.0
-* ubuntu 20.04.5 LTS os image from image builder 1-25 channel
+* ubuntu 20.04.5 LTS os image from image builder 
 * 1 control node and 3 worker nodes
 * GPU worker node - HPE DL360 Gen10 2xIntel(R) Xeon(R) Gold 6238R CPU @ 2.20GHz, 384GB memory, 2xNVIDIA Tesla T4
 * EKS-A cluster v1.23.9-eks-68c1cba, containerd://1.5.9
